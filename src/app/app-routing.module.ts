@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { MenuPrincipal2Component } from './menu-principal2/menu-principal2.component';
 import { AnagramaComponent } from './anagrama/anagrama.component';
 import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritmetica.component';
+import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
+import { PrimosComponent } from './primos/primos.component';
 
 
 const routes: Routes = [
@@ -10,8 +12,9 @@ const routes: Routes = [
    {path: '' , component: MenuPrincipal2Component},
    
    {path: 'anagrama' , component:AnagramaComponent},
-   {path: 'agilidadaritmetica', component: AgilidadaritmeticaComponent}
-   //{path: 'piedrapapeltijera' , component:PiedrapapeltijeraComponent},
+   {path: 'agilidadaritmetica', component: AgilidadaritmeticaComponent},
+   {path: 'piedrapapeltijera' , component:PiedrapapeltijeraComponent},
+   {path: 'primos', component:PrimosComponent }
    //{path: 'agilidadaritmetica' , component:AgilidadaritmeticaComponent},
    //{path: 'tateti' , component:TatetiComponent},
   

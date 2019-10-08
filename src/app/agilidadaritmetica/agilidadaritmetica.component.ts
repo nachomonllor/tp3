@@ -35,6 +35,7 @@ export class AgilidadaritmeticaComponent implements OnInit {
   }
   ngOnInit() {
  //3.Recupera jugador de la base de datos
+    this.comenzar();
     this.jugador = JSON.parse(localStorage.getItem('jugador'));
   console.log(this.jugador); 
   /*

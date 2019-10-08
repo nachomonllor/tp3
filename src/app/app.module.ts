@@ -7,13 +7,19 @@ import { MenuPrincipal2Component } from './menu-principal2/menu-principal2.compo
 import { AnagramaComponent } from './anagrama/anagrama.component';
 import { FormsModule } from '@angular/forms';
 import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritmetica.component';
+import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
+import { PrimosComponent } from './primos/primos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuPrincipal2Component,
     AnagramaComponent,
-    AgilidadaritmeticaComponent
+    AgilidadaritmeticaComponent,
+  
+    PiedrapapeltijeraComponent,
+  
+    PrimosComponent
   ],
   imports: [
     BrowserModule,
