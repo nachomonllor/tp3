@@ -1,13 +1,20 @@
-.unboton {
-    height: 5rem;
+.botonUsuario {
+    height: 2rem;
     margin: 0.5rem;
-    font-size: 3rem;
-    color: #00BFFF;
+    color:#3CB371;
+    font-style: italic;
+    font-size: 20px;
 }
 
-.botonUsuario {
-    height: 5rem;
+.otroBoton {
+    height: 2rem;
     margin: 0.5rem;
-    font-size: 3rem;
-    color:#3CB371;
+    font-style: italic;
+    color: blue;
 }
+
+.texto {
+    color:blue;
+    font-style: italic;
+    font-size: 40px;
+  }
