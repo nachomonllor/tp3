@@ -5,6 +5,7 @@ import { AnagramaComponent } from './anagrama/anagrama.component';
 import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritmetica.component';
 import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
 import { PrimosComponent } from './primos/primos.component';
+import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
 
 
 const routes: Routes = [
@@ -14,10 +15,10 @@ const routes: Routes = [
    {path: 'anagrama' , component:AnagramaComponent},
    {path: 'agilidadaritmetica', component: AgilidadaritmeticaComponent},
    {path: 'piedrapapeltijera' , component:PiedrapapeltijeraComponent},
-   {path: 'primos', component:PrimosComponent }
+   {path: 'primos', component:PrimosComponent },
    //{path: 'agilidadaritmetica' , component:AgilidadaritmeticaComponent},
    //{path: 'tateti' , component:TatetiComponent},
-  
+  {path: 'listadojugadores', component: ListadojugadoresComponent}
    //Login2Component
   // {path: 'login2', component:Login2Component },
  ];

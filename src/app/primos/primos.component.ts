@@ -9,6 +9,7 @@ export class PrimosComponent implements OnInit {
 
   listaPrimos:Array<number>;
   _timer:any;
+ 
   listaAleatorios: Array<number>;
   estadoBotones:string[][] = [ 
       ["white", "white", "white", "white", "white" ],

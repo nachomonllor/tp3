@@ -10,6 +10,7 @@ import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritme
 import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
 import { PrimosComponent } from './primos/primos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   
     PiedrapapeltijeraComponent,
   
-    PrimosComponent
+    PrimosComponent,
+  
+    ListadojugadoresComponent
   ],
   imports: [
     BrowserModule,
