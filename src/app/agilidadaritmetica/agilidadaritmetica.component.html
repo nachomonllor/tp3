@@ -7,27 +7,44 @@
 <input type = "button" value="Enviar" name = "enviar" (click)= "comparar()" />
 <br>
 -->
+<div style="text-align: center">
+    <button mat-button color="primary" class ="botonUsuario" disabled>
+        {{num1}}
+    </button>
+    <button mat-button color="primary" class ="botonUsuario"  disabled>
+        {{operadorSeleccionado}}
+    </button>
+    
+    <button mat-button color="primary" class ="botonUsuario" disabled>
+        {{num2}}
+    </button>
 
-<button mat-button color="primary" class ="unboton" >
-    {{num1}}
- </button>
- <button mat-button color="primary" class ="unboton" >
-     {{operadorSeleccionado}}
- </button>
- <button mat-button color="primary" class ="unboton" >
-     {{num2}}
- </button>
- <input type = "text" name= "resUsuario" class ="botonUsuario" [(ngModel)] ="resUsuario"/>
- <br>
- <input type = "button" value="Enviar" name = "enviar" (click)= "comparar()" />
- <input type = "button" value="Finalizar" name = "finalizar" (click)= "finalizar()" />
- <br>
- <input type = "button" value="comenzar" name = "comenzar" (click)= "comenzar()" />
- {{comparacion}}
- <br>    
- {{reloj}}
- 
- <br>
- <br>
- {{puntos}}
- <!--{{res}} -->
+    <!--
+    <br>
+    <button mat-raised-button (click)="presion(0,0)" class="casilla" [ngStyle]="{'background-color' : estadoBotones[0][0] }">{{posiciones[0][0]}}</button>
+    -->
+    
+    <br>
+    <input type = "text" name= "resUsuario" class ="texto" [(ngModel)] ="resUsuario"/>
+    <br>
+    <br>
+    <button mat-raised-button  class ="otroBoton" (click)= "comparar()" >
+        Enviar
+    </button>
+    <br>
+    <button mat-raised-button  class ="otroBoton" (click)= "finalizar()" >
+        Finalizar
+    </button>
+    <br>
+    
+    <button mat-raised-button  class ="otroBoton" (click)= "comenzar()" >
+        Comenzar
+    </button>
+    <br>
+    {{comparacion}}
+    <br>    
+    Tiempo: {{reloj}}
+    <br>
+    Puntos: {{puntos}}
+    <!--{{res}} -->
+</div>

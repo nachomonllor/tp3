@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritmetica.component';
 import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
 import { PrimosComponent } from './primos/primos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PrimosComponent } from './primos/primos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

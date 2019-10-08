@@ -37,7 +37,7 @@ export class AgilidadaritmeticaComponent implements OnInit {
  //3.Recupera jugador de la base de datos
     this.comenzar();
     this.jugador = JSON.parse(localStorage.getItem('jugador'));
-  console.log(this.jugador); 
+    console.log(this.jugador); 
   /*
   console.log(this.jugador);  
   this.cargarNumeros();
@@ -45,7 +45,7 @@ export class AgilidadaritmeticaComponent implements OnInit {
     */
 }
 comenzar() {
-   
+    clearInterval(this._timer);
     this.cargarNumeros();
     this._timer = setInterval(() => this.contador(), 1000);
 }
@@ -55,7 +55,7 @@ contador(){
 this.reloj--;
 if(this.reloj==0){
   clearInterval(this._timer);
-  alert("Se te acabo el tiempo");
+  //alert("Se te acabo el tiempo");
   //this.puntos=this.puntos-10;
   this.reloj=10;
   this.pasarSiguiente();
@@ -66,6 +66,7 @@ if(this.reloj==0){
 pasarSiguiente(){
   this._timer = setInterval(() => this.contador(), 1000);
   this.cargarNumeros();
+ // this.resUsuario = "";
 }
   cargarNumeros() {
 
@@ -91,6 +92,7 @@ pasarSiguiente(){
    comparar() {
      if(this.res == this.resUsuario) {
         this.comparacion ="CORRECTO";
+       // this.resUsuario = 0;
         this.puntos=this.puntos+10;        
         clearInterval(this._timer);  
         this.reloj=10;
