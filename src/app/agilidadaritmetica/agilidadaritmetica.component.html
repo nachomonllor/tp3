@@ -1,47 +1,50 @@
-<br>
-<br>
-<div style="text-align: center" class = "texto">
-    Completa la expresión
-</div>
-<br>
-<div style="text-align: center">
-    <button mat-button color="primary" class ="botonUsuario" disabled>
-        {{num1}}
-    </button>
-    <button mat-button color="primary" class ="botonUsuario"  disabled>
-        {{operadorSeleccionado}}
-    </button>
-    
-    <button mat-button color="primary" class ="botonUsuario" disabled>
-        {{num2}}
-    </button>
+<body style="background-color:#B3D1A3;">
+    <br>
+    <br>
+    <div style="text-align: center" class = "texto_cabecera">
+        Completa la expresión
+    </div>
+    <br>
+    <div style="text-align: center">
+        <button mat-button color="primary" class ="botonUsuario" disabled>
+            {{num1}}
+        </button>
+        <button mat-button color="primary" class ="botonUsuario"  disabled>
+            {{operadorSeleccionado}}
+        </button>
+        
+        <button mat-button color="primary" class ="botonUsuario" disabled>
+            {{num2}}
+        </button>
 
-    <!--
-    <br>
-    <button mat-raised-button (click)="presion(0,0)" class="casilla" [ngStyle]="{'background-color' : estadoBotones[0][0] }">{{posiciones[0][0]}}</button>
-    -->
-    
-    <br>
-    <input type = "text" name= "resUsuario" class ="texto" [(ngModel)] ="resUsuario"/>
-    <br>
-    <br>
-    <button mat-raised-button  class ="otroBoton" (click)= "comparar()" >
-        Enviar
-    </button>
-    <br>
-    <button mat-raised-button  class ="otroBoton" (click)= "finalizar()" >
-        Finalizar
-    </button>
-    <br>
-    
-    <button mat-raised-button  class ="otroBoton" (click)= "comenzar()" >
-        Comenzar
-    </button>
-    <br>
-    {{comparacion}}
-    <br>    
-    Tiempo: {{reloj}}
-    <br>
-    Puntos: {{puntos}}
-    <!--{{res}} -->
-</div>
+        <!--
+        <br>
+        <button mat-raised-button (click)="presion(0,0)" class="casilla" [ngStyle]="{'background-color' : estadoBotones[0][0] }">{{posiciones[0][0]}}</button>
+        -->
+        
+        <br>
+        <input type = "text" name= "resUsuario" class ="texto" [(ngModel)] ="resUsuario"/>
+        <br>
+        <br>
+        <button mat-raised-button  class ="otroBoton" (click)= "comparar()" >
+            Enviar
+        </button>
+        <br>
+        <button mat-raised-button  class ="otroBoton" (click)= "finalizar()" >
+            Finalizar
+        </button>
+        <br>
+        
+        <button mat-raised-button  class ="otroBoton" (click)= "comenzar()" >
+            Comenzar
+        </button>
+        <br>
+        {{comparacion}}
+        <br>    
+        Tiempo: {{reloj}}
+        <br>
+        Puntos: {{puntos}}
+        <!--{{res}} -->
+    </div>
+
+</body>

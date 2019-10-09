@@ -1,32 +1,34 @@
-<div style="text-align: center" class = "texto">
-    Piedra, papel o tijera
-    <br>
-    Escoge una de las imagenes
-    <br>
-</div>
-<div style="text-align: center">
-   
-    <button type="button"   (click)="clickPapel()">
-        <img src="../../assets/papel.jpg"   height="100" width="100">
-    </button>
-
-    <button type="button"   (click)="clickPiedra()">
-        <img src="../../assets/piedra.jpg"   height="100" width="100">
-    </button>
-
-    <button type="button"   (click)="clickTijera()">
-        <img src="../../assets/tijera.jpg"   height="100" width="100">
-    </button>
+<body style="background-color:#B3D1A3;">
+    <div style="text-align: center" class = "texto">
+        Piedra, papel o tijera
+        <br>
+        Escoge una de las imagenes
+        <br>
+    </div>
+    <div style="text-align: center">
     
-</div>
-<br>
-<div style="text-align: center" class = "texto">
-    Resultado parcial: {{resultadoParcial}}
+        <button mat-button (click)="clickPapel()">
+            <img src="../../assets/papel.jpg"   height="100" width="100">
+        </button>
+
+        <button mat-button (click)="clickPiedra()">
+            <img src="../../assets/piedra.jpg"   height="100" width="100">
+        </button>
+
+        <button mat-button (click)="clickTijera()">
+            <img src="../../assets/tijera.jpg"   height="100" width="100">
+        </button>
+        
+    </div>
     <br>
-    Puntos humano :{{ puntajeHumano}}
-    <br>
-    Puntos compu: {{puntajeCompu}} 
-    <br>
-    {{resultadoFinal}}
-    
-</div>
+    <div style="text-align: center" class = "texto">
+        Resultado parcial: {{resultadoParcial}}
+        <br>
+        Puntos humano :{{ puntajeHumano}}
+        <br>
+        Puntos compu: {{puntajeCompu}} 
+        <br>
+        {{resultadoFinal}}
+    </div>
+
+</body>

@@ -1,22 +1,31 @@
-<div style="text-align: center">
-    <button mat-button color="primary" class ="texto" disabled >
-        {{palabraDesordenada}}
-    </button>
+<body style="background-color:#B3D1A3;">
     <br>
-    <input type = "text" name ="ingresaUsuario" class ="texto" [(ngModel)] = "palabraIngresada"/>
-    <br> <br> 
-    <button mat-button class ="botonUsuario" (click)= "comparar()" >
-            Enviar
-    </button>
     <br>
-    <button mat-button class ="botonUsuario"  (click)= "finalizar()" >
-            Finalizar
-    </button>
+    <div style="text-align: center" class = "texto_cabecera">
+      Anagramas - Encontrá la palabra
+    </div>
+    <br>
+    <div style="text-align: center">
+        <button mat-button color="primary" class ="texto" disabled >
+            {{palabraDesordenada}}
+        </button>
+        <br>
+        <input type = "text" name ="ingresaUsuario" class ="texto" [(ngModel)] = "palabraIngresada"/>
+        <br> <br> 
+        <button mat-button class ="botonUsuario" (click)= "comparar()" >
+                Enviar
+        </button>
+        <br>
+        <button mat-button class ="botonUsuario"  (click)= "finalizar()" >
+                Finalizar
+        </button>
 
-    <i  >  
-        <br>
-        {{resultado + " intento: " + intentos}}
-        <br>
-        Puntos {{puntos}}
-    </i>
-</div>
+        <i  >  
+            <br>
+            {{resultado + " intento: " + intentos}}
+            <br>
+            Puntos {{puntos}}
+        </i>
+    </div>
+
+</body>
