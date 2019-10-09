@@ -13,6 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref" : "/tp3/",
+            "deployUrl": "/tp3/",
             "outputPath": "dist/tp3",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -120,6 +122,10 @@
               "devServerTarget": "tp3:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

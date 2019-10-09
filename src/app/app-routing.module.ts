@@ -6,11 +6,12 @@ import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritme
 import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
 import { PrimosComponent } from './primos/primos.component';
 import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
+import { SobremiComponent } from './sobremi/sobremi.component';
 
 
 const routes: Routes = [
   // {path:  'home', component: Menuprincipal2Component},
-   {path: '' , component: MenuPrincipal2Component},
+   {path: '' , component: MenuPrincipal2Component, pathMatch: 'full'},
    
    {path: 'anagrama' , component:AnagramaComponent},
    {path: 'agilidadaritmetica', component: AgilidadaritmeticaComponent},
@@ -18,9 +19,10 @@ const routes: Routes = [
    {path: 'primos', component:PrimosComponent },
    //{path: 'agilidadaritmetica' , component:AgilidadaritmeticaComponent},
    //{path: 'tateti' , component:TatetiComponent},
-  {path: 'listadojugadores', component: ListadojugadoresComponent}
+  {path: 'listadojugadores', component: ListadojugadoresComponent},
    //Login2Component
   // {path: 'login2', component:Login2Component },
+   {path: 'sobremi', component: SobremiComponent}
  ];
 
 @NgModule({

@@ -11,6 +11,7 @@ import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijer
 import { PrimosComponent } from './primos/primos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
+import { SobremiComponent } from './sobremi/sobremi.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.c
   
     PrimosComponent,
   
-    ListadojugadoresComponent
+    ListadojugadoresComponent,
+  
+    SobremiComponent
   ],
   imports: [
     BrowserModule,

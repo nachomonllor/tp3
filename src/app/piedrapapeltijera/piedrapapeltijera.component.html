@@ -1,25 +1,32 @@
+<div style="text-align: center" class = "texto">
+    Piedra, papel o tijera
+    <br>
+    Escoge una de las imagenes
+    <br>
+</div>
 <div style="text-align: center">
-    <button type="button" class="btn_img" (click)="clickPapel()">
-        <img src="../../assets/papel.jpg" alt="Smiley face" height="100" width="100">
+   
+    <button type="button"   (click)="clickPapel()">
+        <img src="../../assets/papel.jpg"   height="100" width="100">
     </button>
 
-    <button type="button" class="btn_img" (click)="clickPiedra()">
-        <img src="../../assets/piedra.jpg" alt="Smiley face" height="100" width="100">
+    <button type="button"   (click)="clickPiedra()">
+        <img src="../../assets/piedra.jpg"   height="100" width="100">
     </button>
 
-    <button type="button" class="btn_img" (click)="clickTijera()">
-        <img src="../../assets/tijera.jpg" alt="Smiley face" height="100" width="100">
+    <button type="button"   (click)="clickTijera()">
+        <img src="../../assets/tijera.jpg"   height="100" width="100">
     </button>
-    <br>
+    
+</div>
+<br>
+<div style="text-align: center" class = "texto">
     Resultado parcial: {{resultadoParcial}}
-    <br>
     <br>
     Puntos humano :{{ puntajeHumano}}
     <br>
     Puntos compu: {{puntajeCompu}} 
     <br>
-    <br>
     {{resultadoFinal}}
-    <br>
-    <br>
+    
 </div>

@@ -6,10 +6,10 @@
   <div class="subnav">
     <button class="subnavbtn">Juegos <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-        <a href="/anagrama">Anagrama</a>
-        <a href="/agilidadaritmetica">Agilidad Aritmetica</a>
-        <a href="/piedrapapeltijera">Piedra papel tijera</a>
-        <a href="/primos">Encontrar primos</a>
+        <a [routerLink]="['/anagrama'] " >Anagrama</a>
+        <a [routerLink]="['/agilidadaritmetica'] ">Agilidad Aritmetica</a>
+        <a [routerLink]="['/piedrapapeltijera']">Piedra papel tijera</a>
+        <a [routerLink]="['/primos']">Encontrar primos</a>
     </div>
   </div>
   
@@ -17,6 +17,6 @@
       <a href="#home">Listado de resultados</a>
       <a href="#home">Listado de Jugadores</a>
   </div>
-  <a href="#contact">En github</a>
-  <a href="#contact">Sobre mi</a>
+  <a href="https://github.com/nachomonllor">En github</a>
+  <a [routerLink]="['/sobremi']">Sobre mi</a>
 </div>
