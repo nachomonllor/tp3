@@ -1,4 +1,4 @@
-# Tp3 https://nachomonllor.github.io./
+# Tp3 https://nachomonllor.github.io/tp3/
 
 To view online this project: https://nachomonllor.github.io./
 
