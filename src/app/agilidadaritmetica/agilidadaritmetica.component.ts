@@ -19,9 +19,12 @@ export class AgilidadaritmeticaComponent implements OnInit {
   comparacion :string;
   reloj:number =10;
   puntos:number=0;
+  maximo_puntaje:number = 0;
   //1 creas el jugador
   jugador:Jugador;
   juego:Juego;
+  nivel:number = 1;
+  limite:number = 10;
   //arrayOperadores = new Array<string>("+","-", "*");
   constructor() 
   { 
@@ -52,26 +55,29 @@ comenzar() {
 
 contador(){
   //clearInterval(myVar);
-this.reloj--;
-if(this.reloj==0){
-  clearInterval(this._timer);
-  //alert("Se te acabo el tiempo");
-  //this.puntos=this.puntos-10;
-  this.reloj=10;
-  this.pasarSiguiente();
- }
+  this.reloj--;
+  if(this.reloj==0){
+    clearInterval(this._timer);
+    //alert("Se te acabo el tiempo");
+    //this.puntos=this.puntos-10;
+    this.reloj=10;
+    this.nivel = 1;
+    this.limite = 10; //limite de los numeros aleatorios
+    this.pasarSiguiente();
+  }
 // this.pasarSiguiente();
 }
 
-pasarSiguiente(){
-  this._timer = setInterval(() => this.contador(), 1000);
-  this.cargarNumeros();
- // this.resUsuario = "";
-}
+  pasarSiguiente(){
+    this._timer = setInterval(() => this.contador(), 1000);
+    this.cargarNumeros();
+  // this.resUsuario = "";
+  }
+
   cargarNumeros() {
 
-    this.num1  = Math.floor(Math.random() * 10);
-    this.num2  = Math.floor(Math.random() * 10);
+    this.num1  = Math.floor(Math.random() * this.limite);
+    this.num2  = Math.floor(Math.random() * this.limite);
     this.indiceOperador = Math.floor(Math.random() * 3);
 
     if(this.indiceOperador == 0) {
@@ -84,7 +90,7 @@ pasarSiguiente(){
     }
     else if(this.indiceOperador == 2) {
         this.res = this.num1 * this.num2;
-        this.operadorSeleccionado = "*";
+        this.operadorSeleccionado = "x";
     }
   }
 
@@ -93,22 +99,40 @@ pasarSiguiente(){
      if(this.res == this.resUsuario) {
         this.comparacion ="CORRECTO";
        // this.resUsuario = 0;
-        this.puntos=this.puntos+10;        
+        this.puntos=this.puntos+10;  
+        if(this.puntos % 50 == 0) {
+          this.subirDeNivel();
+        }      
         clearInterval(this._timer);  
         this.reloj=10;
         this.pasarSiguiente();
      }
      else{
        this.comparacion ="INCORRECTO-Escriba de vuelta el resulta";
+       //los incorrectos no restan putos
+       /*
        if(this.puntos>=0){
         this.puntos=this.puntos-10;
-       }    
+       } */   
      }
    }
+
+   subirDeNivel() {
+      this.limite += 20;
+      this.nivel++;
+      clearInterval(this._timer);
+      this._timer = setInterval(() => this.contador(), 1000);
+      //this.resetearColorBotones();
+      if(this.puntos > this.maximo_puntaje) {
+        this.maximo_puntaje = this.puntos;
+      }
+  }
+
+
    finalizar(){
     clearInterval(this._timer);
     //4.finaliza el juego, cargas datos
-    this.juego.cantidadPuntos=this.puntos;
+    this.juego.cantidadPuntos = this.puntos;
     this.jugador.juegos.push(this.juego);
     //5. guardas en la base de datos
     localStorage.setItem('jugador', JSON.stringify(this.jugador));

@@ -61,6 +61,7 @@ export class AnagramaComponent implements OnInit {
        //console.log(indSeleccionado);
        //console.log(  this.palabras[indSeleccionado]);
         this.palabraOrdenada = this.palabras[indSeleccionado];
+        console.log(this.palabraOrdenada);
    }
 
    desordenarPalabra() {//algoritmo de Fisherâ€“Yates 
@@ -131,6 +132,9 @@ export class AnagramaComponent implements OnInit {
     //console.log("PERDISTE");
      
    }
+
+
+   
  
    finalizar(){
       //clearInterval(this._timer);

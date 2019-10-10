@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Jugador } from '../modelos/jugador';
+import { Juego } from '../modelos/juego';
 
 @Component({
   selector: 'app-primos',
@@ -30,6 +32,8 @@ export class PrimosComponent implements OnInit {
   nivel :number = 1;
   puntos: number = 0;
   maximo_puntaje:number = 0;
+  juego: Juego;
+  jugador:Jugador;
 
   //para cargar a los numeros primos en una lista
   cribaDeEratostenes(n:number) {
@@ -145,7 +149,7 @@ export class PrimosComponent implements OnInit {
 
         clearInterval(this._timer);
         this.resetearColorBotones();
-        alert("Se te acabo el tiempo");
+       // alert("Se te acabo el tiempo");
         this.inicializar();
        
       }
@@ -176,6 +180,33 @@ export class PrimosComponent implements OnInit {
     }
     
   }
+
+  inicializarJuego() {
+    this.juego = new Juego();
+    this.juego.nombre = "Primos";
+    this.juego.cantidadPuntos = 0;
+    this.juego.hora = new Date();
+  }
+  
+  JugarOtraVez() {
+    this.puntos = 0;
+  }
+
+
+  finalizar(){
+    //clearInterval(this._timer);
+    //4.finaliza el juego, cargas datos
+    this.juego.cantidadPuntos=this.puntos;
+    this.jugador.juegos.push(this.juego);
+    //5. guardas en la base de datos
+    localStorage.setItem('jugador', JSON.stringify(this.jugador));
+    console.log(this.jugador);
+
+    //6.reseteo el juego
+    this.inicializarJuego();
+    this.JugarOtraVez();
+ }
+
 
 
 }
