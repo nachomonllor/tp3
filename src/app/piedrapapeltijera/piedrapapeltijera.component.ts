@@ -31,7 +31,8 @@ export class PiedrapapeltijeraComponent implements OnInit {
     this.elementoSeleccionado = this.arrayElementos[this.indiceElementoSeleccionado];
     console.log(this.elementoSeleccionado);
   }
-
+ 
+  mostrarSeleccionado: string = "";
 
   inicializarJuego() {
     this.seleccionarElemento();
@@ -133,7 +134,10 @@ export class PiedrapapeltijeraComponent implements OnInit {
   clickPapel(){
     this.palabraIngresada = "papel";
     this.comparar();
+    //this.elementoSeleccionado ="";
+    this.mostrarSeleccionado = "";
     this.seleccionarElemento();
+    this.mostrarSeleccionado = this.elementoSeleccionado;
     //Primer asignarpuntaje a la compu y al usuario
     //contador de cantidad rondas
     //puntaje para la compu y el humano.
@@ -141,13 +145,19 @@ export class PiedrapapeltijeraComponent implements OnInit {
   clickPiedra(){
     this.palabraIngresada = "piedra";
     this.comparar();
+
+    this.mostrarSeleccionado = "";
     this.seleccionarElemento();
+    this.mostrarSeleccionado = this.elementoSeleccionado;
     
   }
   clickTijera() {
     this.palabraIngresada = "tijera";
     this.comparar();
+    
+    this.mostrarSeleccionado = "";
     this.seleccionarElemento();
+    this.mostrarSeleccionado = this.elementoSeleccionado;
   }
 
   /*
