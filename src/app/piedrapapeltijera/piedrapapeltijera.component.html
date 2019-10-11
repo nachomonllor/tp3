@@ -12,15 +12,15 @@
     <div style="text-align: center">
     
         <button mat-button (click)="clickPapel()">
-            <img src="../../assets/papel.jpg"   height="100" width="100">
+            <img src="../../assets/papel.jpg" name = "papel"  height="100" width="100">
         </button>
 
         <button mat-button (click)="clickPiedra()">
-            <img src="../../assets/piedra.jpg"   height="100" width="100">
+            <img src="../../assets/piedra.jpg" name = "piedra"  height="100" width="100">
         </button>
 
         <button mat-button (click)="clickTijera()">
-            <img src="../../assets/tijera.jpg"   height="100" width="100">
+            <img src="../../assets/tijera.jpg" name = "tijera" height="100" width="100">
         </button>
         
     </div>
@@ -30,7 +30,7 @@
         <br>
         Puntos humano :{{ puntajeHumano}}
         <br>
-        Puntos compu: {{puntajeCompu}} 
+        Puntos compu: {{puntajeCompu}} - La compu elige: {{elementoSeleccionado}}
         <br>
         {{resultadoFinal}}
     </div>
