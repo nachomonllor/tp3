@@ -29,7 +29,7 @@ export class PiedrapapeltijeraComponent implements OnInit {
     this.indiceElementoSeleccionado = Math.floor(Math.random() * 3);
    // console.log(this.indiceElementoSeleccionado);
     this.elementoSeleccionado = this.arrayElementos[this.indiceElementoSeleccionado];
-    console.log(this.elementoSeleccionado);
+    console.log("la compu eligio: "  + this.elementoSeleccionado);
   }
  
   mostrarSeleccionado: string = "";
