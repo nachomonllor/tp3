@@ -7,27 +7,27 @@ import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijer
 import { PrimosComponent } from './primos/primos.component';
 import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
 import { SobremiComponent } from './sobremi/sobremi.component';
-import { MenuPrincipal3Component } from './menu-principal3/menu-principal3.component';
-import { MenuPrincipal4Component } from './menu-principal4/menu-principal4.component';
+//import { MenuPrincipal3Component } from './menu-principal3/menu-principal3.component';
+//import { MenuPrincipal4Component } from './menu-principal4/menu-principal4.component';
 import { AuthGuard } from './auth/auth.guard';
 import { Login3Component } from './login3/login3.component';
+//import { Menu3Component } from './menu3/menu3.component';
 
 
 const routes: Routes = [
   // {path:  'home', component: Menuprincipal2Component},
   // {path: '' , component: MenuPrincipal2Component, pathMatch: 'full'},
    
-   {path: 'menu' , component: MenuPrincipal4Component, pathMatch: 'full', canActivate: [AuthGuard]},
+   {path: 'menu' , component: MenuPrincipal2Component , pathMatch: 'full', canActivate: [AuthGuard]},
+   {path: 'login', component:MenuPrincipal2Component },
    {path: 'anagrama' , component:AnagramaComponent, canActivate: [AuthGuard]},
    {path: 'agilidadaritmetica', component: AgilidadaritmeticaComponent, canActivate: [AuthGuard]},
    {path: 'piedrapapeltijera' , component:PiedrapapeltijeraComponent, canActivate: [AuthGuard] },
    {path: 'primos', component:PrimosComponent, canActivate: [AuthGuard] },
-   //{path: 'agilidadaritmetica' , component:AgilidadaritmeticaComponent},
-   //{path: 'tateti' , component:TatetiComponent},
-  {path: 'listadojugadores', component: ListadojugadoresComponent, canActivate: [AuthGuard] },
+   {path: 'listadojugadores', component: ListadojugadoresComponent, canActivate: [AuthGuard] },
    //Login2Component
   // {path: 'login2', component:Login2Component },
-   {path: 'login', component:Login3Component },
+   
    {path: 'sobremi', component: SobremiComponent, canActivate: [AuthGuard]},
    {path: '' , component: Login3Component, pathMatch: 'full', canActivate: [AuthGuard]}
   ];

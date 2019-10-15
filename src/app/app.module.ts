@@ -12,10 +12,19 @@ import { PrimosComponent } from './primos/primos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
 import { SobremiComponent } from './sobremi/sobremi.component';
-import { MenuPrincipal3Component } from './menu-principal3/menu-principal3.component';
-import { MenuPrincipal4Component } from './menu-principal4/menu-principal4.component';
+//import { MenuPrincipal3Component } from './menu-principal3/menu-principal3.component';
+//import { MenuPrincipal4Component } from './menu-principal4/menu-principal4.component';
 import { Login3Component } from './login3/login3.component';
 import { AuthService } from './auth/auth.service';
+//import { Menu3Component } from './menu3/menu3.component';
+
+
+import { CommonModule } from '@angular/common';
+
+import {MatButtonModule,MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule} from '@angular/material';
+
+
+
 
 @NgModule({
   declarations: [
@@ -23,27 +32,36 @@ import { AuthService } from './auth/auth.service';
     MenuPrincipal2Component,
     AnagramaComponent,
     AgilidadaritmeticaComponent,
-  
     PiedrapapeltijeraComponent,
-  
     PrimosComponent,
-  
     ListadojugadoresComponent,
-  
     SobremiComponent,
-  
-    MenuPrincipal3Component,
-  
-    MenuPrincipal4Component,
-  
-    Login3Component
+    Login3Component,
+    //Menu3Component,
+
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    MatButtonModule,
+     MatCheckboxModule,
+     MatToolbarModule,
+     MatInputModule,
+     MatProgressSpinnerModule,
+     MatCardModule,
+     MatMenuModule,
+     MatIconModule,
+
+
+     //exports: [MatButtonModule, MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
   ],
+
+
   providers: [AuthService], //servicios
   bootstrap: [AppComponent]
 })

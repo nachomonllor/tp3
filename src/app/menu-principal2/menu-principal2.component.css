@@ -48,11 +48,13 @@
   }
   
   /* Style the subnav links */
+  
   .subnav-content a {
     float: left;
     color: white;
     text-decoration: none;
   }
+  
   
   /* Add a grey background color on hover */
   .subnav-content a:hover {
@@ -65,9 +67,10 @@
     display: block;
   }
 
+  /*
   .casilla {
     height: 4rem;
-    
     margin: 0.1rem;
-    
   }
+  */
+
