@@ -1,0 +1,43 @@
+<!--
+<body [ngStyle]="{'background-color': '#B3D1A3'}">
+-->
+
+<ul class="nav nav-pills" [ngStyle]="{'background-color': '#B3D1A3'}" >
+        <!--
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Juegos</a>
+          <div class="dropdown-menu" [ngStyle]="{'background-color': '#EC9AFF'}" >
+              <!--
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+              -->
+              <a class="dropdown-item" [routerLink]="['/anagrama'] " >Anagrama</a>
+              <a class="dropdown-item" [routerLink]="['/agilidadaritmetica'] ">Agilidad Aritmetica</a>
+              <a class="dropdown-item" [routerLink]="['/piedrapapeltijera']">Piedra papel tijera</a>
+              <a class="dropdown-item" [routerLink]="['/primos']">Encontrar primos</a>
+      
+            <div class="dropdown-divider"></div>
+            <!--
+            <a class="dropdown-item" href="#">Separated link</a>
+            -->
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Listado de resultados</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="#">Listado de jugadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/nachomonllor">En Github</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/sobremi']">Sobre mi</a>
+        </li>
+      </ul>
+

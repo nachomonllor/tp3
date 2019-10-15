@@ -22,6 +22,7 @@ import { AuthService } from './auth/auth.service';
 import { CommonModule } from '@angular/common';
 
 import {MatButtonModule,MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule} from '@angular/material';
+import { Menu3Component } from './menu3/menu3.component';
 
 
 
@@ -37,6 +38,7 @@ import {MatButtonModule,MatCheckboxModule,MatToolbarModule,MatInputModule,MatPro
     ListadojugadoresComponent,
     SobremiComponent,
     Login3Component,
+    Menu3Component,
     //Menu3Component,
 
     
