@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { USUARIOS } from '../modelos/usuarios';
+import { Jugador } from '../modelos/jugador';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ export class AuthService {
   usuarios= USUARIOS;
   constructor() { }
   isLoggedIn = false;
+  jugador:Jugador;
 
   // store the URL so we can redirect after logging in
   redirectUrl: string;
@@ -21,10 +23,9 @@ export class AuthService {
      for(let i =0; i<this.usuarios.length; i++) {
        if(usuario === this.usuarios[i].usuario &&
           clave === this.usuarios[i].contras ) {
-              //this.router.navigate(['/home']);
-              //this.usuarios[i].
-              //localStorage.setItem('jugador', JSON.stringify(this.usuarios[i]));
-              //console.log("entre");
+              
+              localStorage.setItem('jugador', JSON.stringify(this.usuarios[i]));
+              
               this.isLoggedIn = true;
               return true;
           }  
@@ -33,12 +34,20 @@ export class AuthService {
       return false;
    }
 
-   logout(): void {
+  logout(): void {
     this.isLoggedIn = false;
   }
-  /*
-   estaAutorizado() :boolean{
 
-   }*/
+  
+  
+   estaAutorizado() :boolean{
+    this.jugador = JSON.parse(localStorage.getItem('jugador'));
+     if(this.jugador != null){
+          return true;
+     } else{
+       return false;
+     }
+  
+  }
    
   }

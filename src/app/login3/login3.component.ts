@@ -35,6 +35,7 @@ export class Login3Component implements OnInit {
 
   ngOnInit() {
     console.log(this.usuarios);
+    localStorage.clear();
   }
 
   Entrar() {
