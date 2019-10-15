@@ -12,6 +12,10 @@ import { PrimosComponent } from './primos/primos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListadojugadoresComponent } from './listadojugadores/listadojugadores.component';
 import { SobremiComponent } from './sobremi/sobremi.component';
+import { MenuPrincipal3Component } from './menu-principal3/menu-principal3.component';
+import { MenuPrincipal4Component } from './menu-principal4/menu-principal4.component';
+import { Login3Component } from './login3/login3.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,13 @@ import { SobremiComponent } from './sobremi/sobremi.component';
   
     ListadojugadoresComponent,
   
-    SobremiComponent
+    SobremiComponent,
+  
+    MenuPrincipal3Component,
+  
+    MenuPrincipal4Component,
+  
+    Login3Component
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,7 @@ import { SobremiComponent } from './sobremi/sobremi.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthService], //servicios
   bootstrap: [AppComponent]
 })
 export class AppModule { }
