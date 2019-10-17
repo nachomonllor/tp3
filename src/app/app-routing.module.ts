@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuPrincipal2Component } from './menu-principal2/menu-principal2.component';
+//import { MenuPrincipal2Component } from './menu-principal2/menu-principal2.component';
 import { AnagramaComponent } from './anagrama/anagrama.component';
 import { AgilidadaritmeticaComponent } from './agilidadaritmetica/agilidadaritmetica.component';
 import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
