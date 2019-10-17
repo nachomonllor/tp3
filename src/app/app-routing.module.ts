@@ -12,6 +12,7 @@ import { SobremiComponent } from './sobremi/sobremi.component';
 import { AuthGuard } from './auth/auth.guard';
 import { Login3Component } from './login3/login3.component';
 import { Menu3Component } from './menu3/menu3.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 //import { Menu3Component } from './menu3/menu3.component';
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
    {path: 'piedrapapeltijera' , component:PiedrapapeltijeraComponent, canActivate: [AuthGuard] },
    {path: 'primos', component:PrimosComponent, canActivate: [AuthGuard] },
    {path: 'listadojugadores', component: ListadojugadoresComponent, canActivate: [AuthGuard] },
+   {path: 'registrar', component: RegistrarComponent },
    //Login2Component
   // {path: 'login2', component:Login2Component },
    

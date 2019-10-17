@@ -23,6 +23,8 @@ import { CommonModule } from '@angular/common';
 
 import {MatButtonModule,MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule} from '@angular/material';
 import { Menu3Component } from './menu3/menu3.component';
+import { RegistrarComponent } from './registrar/registrar.component';
+import { BasedatosService } from './modelos/basedatos.service';
 
 
 
@@ -39,6 +41,7 @@ import { Menu3Component } from './menu3/menu3.component';
     SobremiComponent,
     Login3Component,
     Menu3Component,
+    RegistrarComponent,
     //Menu3Component,
 
     
@@ -64,7 +67,7 @@ import { Menu3Component } from './menu3/menu3.component';
   ],
 
 
-  providers: [AuthService], //servicios
+  providers: [AuthService, BasedatosService], //servicios
   bootstrap: [AppComponent]
 })
 export class AppModule { }

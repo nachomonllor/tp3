@@ -51,6 +51,8 @@ export class Login3Component implements OnInit {
       console.log("entre");
   }else{
     alert("Ingreso mal su usuario y contraseña");
+    this.progreso=0;
+    this.ProgresoDeAncho="0%";
   }
   
    /*  for(let i =0; i<this.usuarios.length; i++) {
